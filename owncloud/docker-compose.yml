@@ -21,4 +21,3 @@ owncloud-db:
   net: bridge
   mem_limit: 1g
   memswap_limit: 1g
-
