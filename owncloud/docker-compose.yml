@@ -1,23 +1,21 @@
 owncloud:
-  image: owncloud:fpm
+  image: 'owncloud:fpm'
+  autoredeploy: true
   links:
     - owncloud-db
+  mem_limit: 1024m
+  memswap_limit: 1024m
+  restart: always
   tags:
     - doroleim
     - online
-  autoredeploy: true
-  restart: always
-  net: bridge
-  mem_limit: 1g
-  memswap_limit: 1g
-  
 owncloud-db:
-  image: postgres:9.5
+  image: 'postgres:9.5'
+  autoredeploy: true
+  mem_limit: 1024m
+  memswap_limit: 1024m
+  restart: always
   tags:
     - doroleim
     - online
-  autoredeploy: true
-  restart: always
-  net: bridge
-  mem_limit: 1g
-  memswap_limit: 1g
+
